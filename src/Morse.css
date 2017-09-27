@@ -56,5 +56,8 @@
 .queue-leave.queue-leave-active {
   opacity: 0.01;
   height: 0;
-  transition: opacity 300ms ease-in, height 300ms ease-in-out;
+  transition:
+    opacity 300ms ease-in,
+    height 300ms ease-in-out
+  ;
 }
