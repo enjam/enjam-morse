@@ -1,0 +1,52 @@
+.App {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1437422061949-f6efbde0a471");
+  background-color: #ddd;
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.App-section{
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header{
+  text-align: center;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.App-body{
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+h1 {
+  color: #000e33;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+.avatar {
+  object-fit: cover;
+}
+
+.App-fader {
+  background: linear-gradient(0deg, rgba(0,15,52,1), rgba(86,120,168,0));
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 30vh;
+}

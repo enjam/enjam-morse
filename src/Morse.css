@@ -1,0 +1,60 @@
+.Morse-Container{
+
+}
+
+.Morse-Input{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px;
+  margin-top: 0px;
+}
+
+.Morse-TextField {
+  width: 71% !important;
+}
+
+.Morse-Info {
+  font-size: .9em;
+  z-index: 1;
+  color: #b1b4be;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.Morse-Info.Offline {
+  opacity: 1;
+}
+
+.Morse-Item {
+  color: #10224b !important;
+}
+
+.Morse-Item.Active {
+  color: #dbdd63 !important;
+}
+
+.queue-enter {
+  opacity: 0.01;
+}
+
+.queue-enter.queue-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.queue-leave {
+  opacity: 1;
+  height: 72px;
+}
+
+.queue-leave.queue-leave-active {
+  opacity: 0.01;
+  height: 0;
+  transition: opacity 300ms ease-in, height 300ms ease-in-out;
+}
