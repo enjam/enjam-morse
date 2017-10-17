@@ -4,18 +4,22 @@ import Login from './Login';
 import Morse from './Morse';
 import './App.css';
 
-class App extends Component {
-  constructor(){
-    super();
+export default class App extends Component {
+  constructor(props){
+    super(props);
     this.state = {
       user: null,
     };
   }
 
-  componentDidMount(){
-    firebase.auth().onAuthStateChanged(user => {
-      this.setState({user});
+  componentDidMount = () => {
+    this.unsubscribeAuthStateChange = firebase.auth().onAuthStateChanged(user => {
+      this.setState(state => ({...state, user}));
     });
+  }
+
+  componentWillUnmount = () => {
+    this.unsubscribeAuthStateChange();
   }
 
   render() {
@@ -26,7 +30,7 @@ class App extends Component {
             <h1>enjam morse</h1>
           </div>
           <div className="App-body">
-            {this.state.user ? <Morse /> : <Login />}
+            <Morse user={this.state.user}/>
           </div>
         </div>
         <div className="App-fader">
@@ -35,5 +39,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

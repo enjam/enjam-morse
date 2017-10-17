@@ -1,0 +1,7 @@
+.Morse-Item {
+  color: #10224b !important;
+}
+
+.Morse-Item.Active {
+  color: #dbdd63 !important;
+}

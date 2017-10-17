@@ -1,0 +1,22 @@
+.morse-queue-enter {
+  opacity: 0.01;
+}
+
+.morse-queue-enter.morse-queue-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.morse-queue-leave {
+  opacity: 1;
+  height: 72px;
+}
+
+.morse-queue-leave.morse-queue-leave-active {
+  opacity: 0.01;
+  height: 0;
+  transition:
+    opacity 300ms ease-in,
+    height 300ms ease-in-out
+  ;
+}
